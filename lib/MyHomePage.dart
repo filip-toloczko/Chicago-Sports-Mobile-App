@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:ftolo2_project_4/bears_video.dart';
-// import 'package:video_player/video_player.dart';
-// import 'package:audioplayers/audioplayers.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -50,12 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.cyan.shade50,
           child: Column(
             children: [
-              Padding(padding: EdgeInsets.all(100)),
+              Image(image: AssetImage('images/chicagobanner.png')),
+              Padding(padding: EdgeInsets.all(30)),
               Text(
-                "Click on a slice for more info",
+                "Click on a slice for more info:",
                 style: TextStyle(
                   color: Colors.blue.shade900,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.w500
                 ),
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ftolo2_project_4/bears_geo.dart';
 import 'package:ftolo2_project_4/bears_video.dart';
+import 'package:ftolo2_project_4/hawks_geo.dart';
+import 'package:ftolo2_project_4/hawks_video.dart';
 import 'MyHomePage.dart';
 import 'bears.dart';
 import 'sox.dart';
@@ -10,6 +12,8 @@ import 'cubs.dart';
 import 'cubs_video.dart';
 import 'cubs_geo.dart';
 import 'bulls.dart';
+import 'bulls_geo.dart';
+import 'bulls_video.dart';
 import 'blackhawks.dart';
 
 void main() {
@@ -37,7 +41,11 @@ class MyApp extends StatelessWidget {
         '/cubsgeo' : (context) => CubsGeo(),
         '/cubsvideo' : (context) => CubsVideo(),
         '/bulls' : (context) => BullsScreen(),
+        '/bullsgeo' : (context) => BullsGeo(),
+        '/bullsvideo' : (context) => BullsVideo(),
         '/hawks' : (context) => HawksScreen(),
+        '/hawksgeo' : (context) => HawksGeo(),
+        '/hawksvideo' : (context) => HawksVideo(),
       },
     );
   }

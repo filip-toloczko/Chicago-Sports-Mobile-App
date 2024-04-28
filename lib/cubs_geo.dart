@@ -8,21 +8,62 @@ class CubsGeo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wrigley Field Directions'),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Colors.blue.shade100,
+        title: Text(
+          'Directions to Wrigley Field',
+          style: TextStyle(
+              color: Colors.blue.shade900
+          ),
+        ),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+                bottom: Radius.circular(20)
+            )
+        ),
       ),
-      body: Center(child: Builder(
-        builder: (context) {
-          return ElevatedButton(
-            onPressed: () => MapLauncher.showMarker(
-                mapType: MapType.google,
-                coords: Coords(41.9484, -87.6553),
-                title: "Wrigley Field"
-            ),
-            child: Text('Get directions'),
-          );
-        },
-      )),
+      body: Container(
+        color: Colors.cyan.shade50,
+        child: Center(
+          child: Column(
+            children: [
+              Padding(padding: EdgeInsets.fromLTRB(0,30,0,0)),
+              Image(
+                  image: AssetImage("images/wrigley.png")
+              ),
+              Padding(padding: EdgeInsets.fromLTRB(0,30,0,0)),
+              ElevatedButton(
+                onPressed: () => MapLauncher.showMarker(
+                  mapType: MapType.google,
+                  coords: Coords(41.9484, -87.6553),
+                  title: "Wrigley Field"
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue.shade100
+                ),
+                child: Text(
+                  'Get directions',
+                  style: TextStyle(
+                      color: Colors.blue.shade900
+                  ),
+                ),
+              ),
+              Padding(padding: EdgeInsets.fromLTRB(0,30,0,0)),
+              ElevatedButton(
+                onPressed: (){Navigator.of(context).popUntil((route) => route.isFirst);},
+                child: Text(
+                  "Go home",
+                  style: TextStyle(
+                      color: Colors.blue.shade900
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue.shade100
+                ),
+              )
+            ]
+          ),
+        ),
+      ),
     );
   }
 }
