@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SoxScreen extends StatelessWidget {
-  SoxScreen({Key? key}) : super(key: key);
+class BearsScreen extends StatelessWidget {
+  BearsScreen({Key? key}) : super(key: key);
 
 
 
@@ -10,7 +10,7 @@ class SoxScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('The Sox'),
+          title: const Text('Da Bears'),
           backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         body: Center(
@@ -18,15 +18,15 @@ class SoxScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: (){
-                    Navigator.pushNamed(context, '/soxvideo');
+                    Navigator.pushNamed(context, '/bearsvideo');
                   },
-                  child: const Text("White Sox Championship Video")
+                  child: const Text("Bears Championship Video")
               ),
               ElevatedButton(
                   onPressed: (){
-                    Navigator.pushNamed(context, '/soxgeo');
+                    Navigator.pushNamed(context, '/bearsgeo');
                   },
-                  child: const Text("Directions to Guaranteed Rate Field")
+                  child: const Text("Directions to Soldier Field")
               ),
             ],
           ),

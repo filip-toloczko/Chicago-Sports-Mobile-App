@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class BearsScreen extends StatelessWidget {
-  BearsScreen({Key? key}) : super(key: key);
+class BearsVideo extends StatelessWidget {
+  BearsVideo({Key? key}) : super(key: key);
 
   final YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: '7-8lt9yxNdY',
@@ -29,10 +29,10 @@ class BearsScreen extends StatelessWidget {
         child: YoutubePlayer(
           controller: _controller,
           showVideoProgressIndicator: true,
-          progressIndicatorColor: Colors.black,
+          progressIndicatorColor: Colors.redAccent,
           progressColors: const ProgressBarColors(
-            playedColor: Colors.black,
-            handleColor: Colors.black,
+            playedColor: Colors.redAccent,
+            handleColor: Colors.redAccent,
           ),
           onReady: () {
             _controller.pause();
